@@ -1,0 +1,149 @@
+
+\documentclass[
+   ngerman          % neue deutsche Rechtschreibung
+  ,a4paper          % Papiergrösse
+  ,11pt
+% ,12pt
+  ,pdftex
+%  ,disable         % Todo-Markierungen auschalten
+]{report}
+
+\usepackage[utf8]{inputenc}    
+\usepackage{bericht}
+\csname endofdump\endcsname
+
+\newcommand{\Autor}{Lorenz Scherrer}
+\newcommand{\MatrikelNummer}{8809469}
+\newcommand{\Kursbezeichnung}{tinf21b3}
+
+\newcommand{\FirmenName}{Sick AG}
+\newcommand{\FirmenStadt}{Waldkirch}
+\newcommand{\FirmenLogoDeckblatt}{\fbox{\includegraphics[width=3cm]{images/lion.png}}}
+
+\newcommand{\BetreuerFirma}{Titel Vorname Nachname}
+\newcommand{\BetreuerDHBW}{Titel Vorname Nachname}
+
+\newcommand{\Was}{Studienarbeit}
+
+\newcommand{\Titel}{Bauen eines eigenen E-Bikes}
+\newcommand{\AbgabeDatum}{1. April 2090}
+
+\newcommand{\Dauer}{12 Wochen}
+
+% \newcommand{\Abschluss}{Bachelor of Engineering}
+\newcommand{\Abschluss}{Bachelor of Science}
+
+\newcommand{\Studiengang}{Informatik / Informationstechnik}
+% \newcommand{\Studiengang}{Informatik / Angewandte Informatik}
+
+\hypersetup{%%
+  pdfauthor={\Autor},
+  pdftitle={\Titel},
+  pdfsubject={\Was}
+}
+
+
+\bibliography{bericht}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+
+
+\begin{titlepage}
+\begin{center}
+\vspace*{-2cm}
+\FirmenLogoDeckblatt\hfill\includegraphics[width=4cm]{dhbw-logo}\\[2cm]
+{\Huge \Titel}\\[1cm]
+{\Huge\scshape \Was}\\[1cm]
+{\large für die Prüfung zum}\\[0.5cm]
+{\Large \Abschluss}\\[0.5cm]
+{\large des Studienganges \Studiengang}\\[0.5cm]
+{\large an der}\\[0.5cm]
+{\large Dualen Hochschule Baden-Württemberg Karlsruhe}\\[0.5cm]
+{\large von}\\[0.5cm]
+{\large\bfseries \Autor}\\[1cm]
+{\large Abgabedatum \AbgabeDatum}
+\vfill
+\end{center}
+\begin{tabular}{l@{\hspace{2cm}}l}
+Bearbeitungszeitraum	         & \Dauer 			\\
+Matrikelnummer	                 & \MatrikelNummer		\\
+Kurs			         & \Kursbezeichnung		\\
+Ausbildungsfirma	         & \FirmenName			\\
+			         & \FirmenStadt			\\
+Betreuer der Ausbildungsfirma	 & \BetreuerFirma		\\
+Gutachter der Studienakademie	 & \BetreuerDHBW		\\
+\end{tabular}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{erklaerung.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{abstract}
+%abstract
+%\centering Stand \verb+$Date: 2023/07/25 11:03:01 $+
+%\end{abstract}
+
+\newpage
+\tableofcontents           % Inhaltsverzeichnis hier ausgeben
+%\listoffigures             % Liste der Abbildungen
+%\listoftables              % Liste der Tabellen
+%\lstlistoflistings         % Liste der Listings
+%\listofequations           % Liste der Formeln
+
+% Jetzt kommt der "eigentliche" Text
+%\include{abk}              % Abkürzungsverzeichnis
+
+\pagenumbering{arabic}
+% https://tex.stackexchange.com/questions/226864/start-toc-from-chapter-1-and-also-page-numbering
+
+\include{input/übersicht}
+\include{input/einleitung}
+\include{input/batterie}
+\include{input/Controller}
+\include{input/steuergerät}
+\include{input/motor}
+\include{input/Schaltung}
+
+
+% Ab hier beginnt der Anhang
+\appendix
+\addcontentsline{toc}{chapter}{Anhang}
+
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+
+% Haben Sie das "biblatex"-Paket nicht installiert, benutzen Sie folgendes:
+% Ohne das "biblatex"-Paket (s. bericht.sty) produziert folgendes
+% "deutsche" Zitate in Literaturverzeichnissen gemaß der Norm DIN 1505,
+% Teil 2 vom Jan. 1984.
+% Die Zitatmarken werden alphabetisch nach Verfassern
+% sortiert und sind durch abgekürzte Verfasserbuchstaben plus
+% Erscheinungsjahr in eckigen Klammern gekennzeichnet.
+
+% \bibliographystyle{alphadin}
+% \bibliography{bericht}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% BIBLATEX
+% Benutzt man das "biblatex"-Paket, muß man folgendes schreiben:
+\def\refname{Literaturverzeichnis}
+\printbibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+%\include{changelog}
+
+\newpage
+\addcontentsline{toc}{chapter}{Liste der ToDo's}
+%\listoftodos[Liste der ToDo's]
+
+
+\end{document}
