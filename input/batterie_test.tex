@@ -1,0 +1,218 @@
+\chapter{Batterie bauen}
+Eine der zentralen Komponenten bei der Konstruktion eines eigenen E-Bikes ist die Batterie, die den Motor mit Energie versorgt. In diesem Abschnitt werden wir uns eingehend mit der Herstellung einer maßgeschneiderten Lithium-Ionen-Batterie befassen, indem wir größere Zellen auswählen und in einer speziellen Konfiguration miteinander verbinden.\\
+
+Für unsere Batterie greifen wir auf größere Lithium-Ionen-Zellen zurück, wobei die 21700-Zellen häufig bevorzugt werden. Diese speziellen Zellen verfügen über eine Nennspannung von 3,6 Volt. Ein E-Bike-Motor erfordert jedoch in der Regel eine höhere Spannung im Bereich von 36-42 Volt, um effizient zu funktionieren. Um diese Anforderung zu erfüllen, werden die 21700-Zellen in Serie geschaltet, wodurch ihre Einzelspannungen addiert werden.\\
+
+Die Verbindung der Zellen erfolgt durch Löten, um eine solide und zuverlässige elektrische Verbindung sicherzustellen. Zusätzlich dazu wird ein Smart Battery Management System (BMS) eingesetzt, um die Batterie zu überwachen und zu schützen. Das BMS gewährleistet nicht nur die Sicherheit des Systems, sondern spielt auch eine entscheidende Rolle bei der effizienten Nutzung und Lebensdauer der Batterie. Es überwacht den Ladezustand der Zellen, verhindert Überladung und Tiefentladung sowie Temperaturabweichungen.\\
+
+Die Konstruktion der Batterie ist ein entscheidender Schritt beim Bau eines selbstgemachten E-Bikes, da sie die Leistung und Reichweite des Fahrzeugs maßgeblich beeinflusst. In den folgenden Abschnitten werden wir uns weiteren Aspekten des E-Bike-Baus widmen, einschließlich der Programmierung des Controllers, der Anpassung der Gangschaltung und der Sicherstellung, dass das Fahrrad den erhöhten Anforderungen der elektrischen Unterstützung gerecht wird.\\ 
+
+
+\section{Die Zellen}
+
+%Größere Litiumionzellen bestellen aus einer vielzahl an Zellen hier werden meisten die 21700 Zellen verwendet.
+%Diese haben eine Nennspannung von 3,6 Volt ein E-bike motor braucht meistens eine Spannung von 36-42V weswegen diese in Reihe geschaltet werden müssen.
+%Die werden durch verlötung verbunden. Um Sicherung zu gewäreleisten wird ein \texttt{Smart Battery Managment System} verwendet. Dieses System verwaltet auch die Batterie.
+
+\begin{itemize}
+    \item Für welche Zellen sollte sich entschieden werden?
+    \item Warum sollte eine von diesen Zellen gewählt werden?
+    \item Was sind die Unterschiede zwischen den beiden Zellen?
+\end{itemize}
+% Für welche Zellen sollte gewähhlt werden?
+%Warum sollte eine von diesen Zellen gewählt werden?
+%Was sind die unterschiede zwischen den beiden Zellen?
+Samsung 21700-40T Zelle \\
+Samsung 21700-50E
+
+
+\section{Anforderungen an die Batterie}
+Fragen:
+\begin{itemize}
+    \item Was muss die Batterie leisten?
+    \item Welche Parameter sind variabel?
+    \item Welche Leistung sollte die Batterie haben?
+    \item Welche Kapazität sollte die Batterie haben?
+\end{itemize}
+
+Parameter der Batterie
+\begin{itemize}
+    \item Volt/Spannung: 48V
+    \item Ampher/Leistung: 20-36A wahrscheinlich nötig
+    \item Ampherstunden/Kapazität: ca. 15-30Ah
+\end{itemize}
+
+Wie viele Zellen muss man in Reihe schalten damit die Spannung 48V beträgt:
+\[ \frac{48V}{3.6V}\approx 13\]
+
+Wie viele Zellen müssen Parallel geschaltet werden um auf die Leistung u. und Kapazität zu kommen:
+
+
+13 in Reihe schalten
+5 Parallel
+65 Zellen
+
+\section{Übersicht}
+Ich habe noch ein paar Fragen zur Batterie, der Motor braucht wahrscheinlich 48V. Die Batterie wird wahrscheinlich aus den Samsung 21700-40T oder
+Samsung 21700-50E Zellen gebaut werden. Für mein Rechenbeispiel werde ich die Samsung 21700-40T verwenden, diese hat die Parameter Spannung 3.6V, Entladestrom 9.8, Kapazität - mAh 4.900,00. Um auf ca. 48V zu erreichen, müssen 13 in Reihe geschaltet werden. Und je nachdem, welchen Entladestrom oder Kapazität benötigt werden müssen mehrere Zellen pro Reihe parallel geschaltet werden. Ein normaler E-Bike/S-Pedelec Akku hat eine Kapazität von 10-30Ah Stunden. Der Motor hat voraussichtlich eine Leistung von 1500W, wenn drei Zellen parallel geschaltet sind gibt es einen entladestrom von 29,4 bei einer Spannung von 48V kommt man auf eine Leistung der Batterie von 1375,92W(29,4A*3,6V*13). Man hätte eine Kapazität von 14,7 Ah. \\
+ 
+Must-have
+\begin{itemize}
+    \item Zellen /////
+    \item BMS (z.B. 60A, 10S) 10S heißt 10 in Reihe in meinem Fall waere es 13S /////
+    \item Ladegeraet
+    \item Doppelseitiges Klebeband
+    \item Lade und entlade anschluss
+    \item Kaptontape /////
+    \item Kummiabdeckungen für den Pluspol /////
+    \item Kupferdraht /////
+    \item 
+\end{itemize}
+
+Offene Fragen
+\begin{itemize}
+    \item Wie kann die Verbindung am besten zwischen den Zellen herstellt werden ?
+    \item Könnten auch gebrauchte Zellen verwendet werden?
+    \item Wie muss es genau verbunden werden?
+    \item Wo gehen die Kabel hin die aus dem Akku heraus gehen? An welche Adapter wird welches Kabel angeschlossen?
+    \item Wo bekomme ich ein Punktschweiß Geraete her?
+\end{itemize}
+
+
+Löten geht so wie in diesem Video mit Nickband
+\url{https://www.youtube.com/watch?v=e67byImYuL0}
+
+Oder so \url{https://www.youtube.com/watch?v=pptK4TTZr8Q}
+Mit einem Draht
+
+https://www.sunkko.net/blog/two-types-of-bmss-and-each-wiring-diagram/
+
+
+\section{Ladegeraet}
+
+\section{Wahl des BMS}
+
+Ich habe die Lishen Zellen bestellt 65 davon ich will 5 von diesen Parallel schalten.
+Für diese will ich folgendes BMS verwenden 
+https://www.lithiumbatterypcb.com/product/13s-48v-li-ion-battery-pcb-board-54-6v-lithium-bms-with-60a-discharge-current-for-electric-motorcycle-and-e-scooter-protection-2-2-3-2-2-2-2-2/
+Es ist ausgelegt auf eine Leistung von 60A 
+
+13S5P 
+
+Welches eine Leistung von 60 A ausgelegt ist 
+
+\section{Adpter fuer die Batterie}
+Welche Anschluesse hat die Batterie?
+
+
+
+
+\section{Verbindung zwischen den Zellen}
+Löten oder Punktschweißen
+
+Löten nicht stabil zu hohe belastung auf den Zellen. Wiederstand an den Zellen ist sehr Hoch können auch durch brennen was aber nicht schlimm sein muss .
+Wie Löten?
+Es braucht einen recht hochen Querschnitt da die Zellen einen recht hochem Entladestrom leisten. Rechnung:
+\begin{itemize}
+    \item Meschisch nicht so stabil
+    \item Wiederstang sehr hoch wenn nicht gut verlötet
+    \item braucht mehr Platz
+    \item braucht ewig
+    \item man braucht einen hochen Querschnitt
+\end{itemize}
+
+Punktschweißen
+\begin{itemize}
+    \item standard
+    \item geringe hitze aud den Batterien
+    \item meschanisch stabiler
+    \item geht schneller
+    \item 
+\end{itemize}
+Dinge die man braucht:
+\begin{itemize}
+    \item 220v 3-6A puch buttom
+    \item 10mm Kupferdraht
+    \item 6mm Kupferdraht
+    \item Wie funktioniert ein Trafo
+\end{itemize}
+\url{https://www.youtube.com/watch?v=o5eej4MSotk}
+Wie funktioniert ein trafo
+\url{https://www.youtube.com/watch?v=rTVu1lZMPG0}
+Rechnung für den trafo
+
+\section{Punktschweißgerät}
+Wie funktioniert schweißen?
+Welchen Strom braucht man dazu?
+Wie funktioniert ein Trafo?
+Wo bekommt man einen Trafo her ?
+Wie entfernt man den Sekundären block?
+Problem micht den Primären Block beschädigen
+Wie winkelt man den den Sekundären Block?
+Wie stellt man die Halterung her?
+Welchen durchschnitt brauchen die Spitzen?
+Welche Optionen gibt es anzuschalten?
+...
+
+Transformator Formel:
+\begin{align}%
+        \frac{U_s}{U_p} &= \frac{N_s}{N_p}\\
+        \frac{U_s}{U_p}\cdot N_p &= N_s \\
+        \frac{I_s}{I_p} &=\frac{N_p}{N_s}\\
+        \frac{I_p}{I_s} \cdot N_p = N_s &= \frac{16A}{800A}\cdot 224 \approx 4.48
+\end{align}
+        
+        \begin{conditions*}
+            U_p  &  Spannung am primären Block\\
+            U_s  &  Spannung am sekundären Block $\approx 4V$ \\
+            I_p  &  Stromstärke am primären Block = 16A\\
+            I_s & Stromstärke am sekundären Block\\
+            N_p & Wicklungen primären Block = $16\cdot14=224$\\
+            N_s & Wicklungen sekundären Block\\
+        \end{conditions*}
+
+Script zum Video:
+
+
+Was soll ich noch aus dem Schnitt sagen:
+\begin{itemize}
+    \item 
+\end{itemize}
+
+\section{Schlatplan}
+Batterien verbindungen mit Doppelseitigem Klebeband
+ 
+Punktscheißen mit dünneren schienen da sonst kurz schluss
+Punktscheiß gerät wird sehr Heiß 
+spitzen verrutschen 
+Taster bleibt an 
+Holz gibt nach
+
+Reihenschaltung ebensfalls 
+Am gesammten Pulspol abgesichert 
+dann das BMS angeschlossen die Temperatursensoren auf der Batterie verteilt
+die veschieden drähte nachschalt plan auf der Batterie verteilen und durch messen 
+ne Problemen selbst erneut verleuten
+
+Dann anschließen und mit der App verbinden
+Man musste noch schauen wo die alle drähter genau hin müssen
+
+B- zu batterie Minus
+C- zu Minus des verbrauchers
+Puls der Batterie zum Puls des verbrauchers
+
+Dannach mit kartonsche verwickelt
+\section{Batterie Hülle}
+%https://www.youtube.com/watch?v=1WqAEA9_mMw
+mehrer Optionen fertige hülle kaufen mit Nickel schreifen 
+Oder selbst eine Box bauen aus holz oder 
+eine Hülle aus dem 3d drucker
+
+
+
+https://www.lithiumbatterypcb.com/product/13s-48v-li-ion-battery-pcb-board-54-6v-lithium-bms-with-60a-discharge-current-for-electric-motorcycle-and-e-scooter-protection-2-2-3-2-2-2-2-2/
+
+
+https://www.lithiumbatterypcb.com/smart-bms-software-download/
+
+
