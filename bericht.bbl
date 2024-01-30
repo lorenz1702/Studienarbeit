@@ -16,5 +16,39 @@
   {}
 \endgroup
 
-\datalist[entry]{nty/global//global/global}\enddatalist
+\datalist[entry]{nty/global//global/global}
+  \entry{Tritek.12132021}{article}{}
+    \name{author}{1}{}{%
+      {{hash=T}{%
+         family={Tritek},
+         familyi={T\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{T1}
+    \strng{fullhash}{T1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{12/13/2021}
+    \field{labeldatesource}{}
+    \field{sortinit}{T}
+    \field{sortinithash}{T}
+    \field{abstract}{%
+    Die Unterschiede zwischen 21700er und 18650er Batterie; {\"A}hnlichkeiten;
+  Anwendungen von 21700 und 18650; welche batterie h{\"a}lt l{\"a}nger und
+  mehr.%
+    }
+    \field{title}{21700 vs 18650 Akku, Kampf auf LEV}
+    \verb{url}
+    \verb https://tritekbattery.com/de/21700-or-18650-battle-of-batteries-on-le
+    \verb v/
+    \endverb
+    \verb{file}
+    \verb Tritek 12 13 2021 - 21700 vs 18650 Akku:Attachments/Tritek 12 13 2021
+    \verb  - 21700 vs 18650 Akku.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{ebike battery manufacturer}
+    \field{year}{12/13/2021}
+    \warn{\item Invalid format of field 'urldate'}
+  \endentry
+\enddatalist
 \endinput

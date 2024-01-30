@@ -3,40 +3,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Einleitung}{3}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Batterie bauen}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Batterie}{4}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Die Zellen}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Zellen}{4}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Anforderungen an die Batterie}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.1.1}Art der Zellen}{5}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Übersicht}{5}{section.2.3}%
+\contentsline {subsection}{\numberline {2.1.2}Wahl der Marke}{6}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Ladegeraet}{6}{section.2.4}%
+\contentsline {section}{\numberline {2.2}Batterie Management System}{7}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Wahl des BMS}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.3}Verbindung zwischen den Zählen}{7}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Adpter fuer die Batterie}{6}{section.2.6}%
+\contentsline {subsection}{\numberline {2.3.1}Löten vs. Punktscheißen}{7}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Verbindung zwischen den Zellen}{7}{section.2.7}%
+\contentsline {section}{\numberline {2.4}Punktschweißgerät}{7}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Punktschweißgerät}{7}{section.2.8}%
+\contentsline {section}{\numberline {2.5}Konstruktion der Batterie}{7}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Schlatplan}{8}{section.2.9}%
+\contentsline {subsection}{\numberline {2.5.1}Wahl des Anschlusses}{7}{subsection.2.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.10}Batterie Hülle}{8}{section.2.10}%
+\contentsline {chapter}{\numberline {3}Controller programmieren}{8}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Controller programmieren}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Steuergerät programmieren}{9}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Steuergerät programmieren}{10}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Motor}{10}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Motor}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Arten von Fahrradmotoren}{10}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Arten von Fahrradmotoren}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Position des Motors}{10}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Position des Motors}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Lesitung des Motors}{10}{section.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Lesitung des Motors}{11}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Energierückgewinnung}{10}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Energierückgewinnung}{11}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Schaltung}{11}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Schaltung}{12}{chapter.6}%
+\contentsline {chapter}{Anhang}{12}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Index}{12}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Literaturverzeichnis}{12}{chapter.6}%

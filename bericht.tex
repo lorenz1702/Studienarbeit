@@ -10,6 +10,18 @@
 
 \usepackage[utf8]{inputenc}    
 \usepackage{bericht}
+
+\usepackage{amsmath}% WICHTIG: AMS-Pakete laden
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{blindtext}% Um Blindtext zu erzeugen
+\usepackage{array,tabularx}
+
+\newenvironment{conditions*}
+  {\par\vspace{\abovedisplayskip}\noindent
+   \tabularx{\columnwidth}{>{$}l<{$} @{\ : } >{\raggedright\arraybackslash}X}}
+  {\endtabularx\par\vspace{\belowdisplayskip}}
+
 \csname endofdump\endcsname
 
 \newcommand{\Autor}{Lorenz Scherrer}

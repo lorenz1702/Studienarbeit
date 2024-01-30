@@ -1,189 +1,95 @@
-\chapter{Batterie bauen}
-Eine der zentralen Komponenten bei der Konstruktion eines eigenen E-Bikes ist die Batterie, die den Motor mit Energie versorgt. In diesem Abschnitt werden wir uns eingehend mit der Herstellung einer maßgeschneiderten Lithium-Ionen-Batterie befassen, indem wir größere Zellen auswählen und in einer speziellen Konfiguration miteinander verbinden.\\
+%Fragen an Lehmann
+%Soll ich noch Literatur dazu ein binden?
+%Welchen Controller könnte ich verwenden?
 
-Für unsere Batterie greifen wir auf größere Lithium-Ionen-Zellen zurück, wobei die 21700-Zellen häufig bevorzugt werden. Diese speziellen Zellen verfügen über eine Nennspannung von 3,6 Volt. Ein E-Bike-Motor erfordert jedoch in der Regel eine höhere Spannung im Bereich von 36-42 Volt, um effizient zu funktionieren. Um diese Anforderung zu erfüllen, werden die 21700-Zellen in Serie geschaltet, wodurch ihre Einzelspannungen addiert werden.\\
+\chapter{Batterie}\label{introduction}
+Eine essenzielle Komponente bei der Realisierung eines individuell konstruierten E-Bikes ist die Batterie, welche den Motor mit der benötigten Energie versorgt. Im vorliegenden Abschnitt wird detailliert auf die Fertigung einer individuellen Lithium-Ionen-Batterie eingegangen, die durch die Auswahl passenden Zellen und ihre spezifische Konfiguration realisiert wird.\\
 
-Die Verbindung der Zellen erfolgt durch Löten, um eine solide und zuverlässige elektrische Verbindung sicherzustellen. Zusätzlich dazu wird ein Smart Battery Management System (BMS) eingesetzt, um die Batterie zu überwachen und zu schützen. Das BMS gewährleistet nicht nur die Sicherheit des Systems, sondern spielt auch eine entscheidende Rolle bei der effizienten Nutzung und Lebensdauer der Batterie. Es überwacht den Ladezustand der Zellen, verhindert Überladung und Tiefentladung sowie Temperaturabweichungen.\\
+%Was muss die Batterie Leisten?
+Die Batterie muss den spezifizierten Anforderungen hinsichtlich Leistung, Form und Stabilität entsprechen. In Bezug auf die Leistung ist eine Spannung von 48 Volt erforderlich, um den Motor zu versorgen, und die Batterie muss eine Leistung von 1500 Watt bereitstellen, um die gewünschte Performance zu gewährleisten. Dies wird durch diese Formel berechnet\ref*{eq:wattformel}:\\
+\begin{equation}
+    P = U \cdot I \longrightarrow I = \frac{P}{U}= \frac{1500W}{48V}= 31.25
+    \label{eq:wattformel}
+\end{equation}
+\label{introduction2}
+%Welche Kapazität soll die Batterie haben?
 
-Die Konstruktion der Batterie ist ein entscheidender Schritt beim Bau eines selbstgemachten E-Bikes, da sie die Leistung und Reichweite des Fahrzeugs maßgeblich beeinflusst. In den folgenden Abschnitten werden wir uns weiteren Aspekten des E-Bike-Baus widmen, einschließlich der Programmierung des Controllers, der Anpassung der Gangschaltung und der Sicherstellung, dass das Fahrrad den erhöhten Anforderungen der elektrischen Unterstützung gerecht wird.\\ 
-\section{Die Zellen}
+Die Batterie sollte nicht nur die erforderliche Leistung liefern, sondern auch eine stabile und sichere Form aufweisen. Die physikalische Stabilität der Batterie ist entscheidend, um sicherzustellen, dass sie den Belastungen während des Betriebs standhält und keine strukturellen Schwächen aufweist. Dies ist besonders wichtig, um mögliche Gefahren wie Leckagen oder mechanische Schäden zu vermeiden.\\
 
-%Größere Litiumionzellen bestellen aus einer vielzahl an Zellen hier werden meisten die 21700 Zellen verwendet.
-%Diese haben eine Nennspannung von 3,6 Volt ein E-bike motor braucht meistens eine Spannung von 36-42V weswegen diese in Reihe geschaltet werden müssen.
-%Die werden durch verlötung verbunden. Um Sicherung zu gewäreleisten wird ein \texttt{Smart Battery Managment System} verwendet. Dieses System verwaltet auch die Batterie.
+Darüber hinaus ist die Form der Batterie relevant, da sie in das E-Bike integriert werden muss. Die Form sollte daher kompatibel mit dem vorgesehenen Platzierungsort sein, um eine effiziente Nutzung des verfügbaren Raums zu ermöglichen. Die Batterie sollte sich leicht und sicher im vorgesehenen Bereich befestigen lassen, um eine optimale Integration in das Gesamtsystem zu gewährleisten.\\
 
-\begin{itemize}
-    \item Für welche Zellen sollte sich entschieden werden?
-    \item Warum sollte eine von diesen Zellen gewählt werden?
-    \item Was sind die Unterschiede zwischen den beiden Zellen?
-\end{itemize}
-% Für welche Zellen sollte gewähhlt werden?
-%Warum sollte eine von diesen Zellen gewählt werden?
-%Was sind die unterschiede zwischen den beiden Zellen?
-Samsung 21700-40T Zelle \\
-Samsung 21700-50E
+Die Konstruktion der Batterie stellt einen maßgeblichen Schritt im Bau eines selbstgefertigten E-Bikes dar, da sie maßgeblich die Leistung und Reichweite des Fahrzeugs beeinflusst.
 
 
-\section{Anforderungen an die Batterie}
-Fragen:
-\begin{itemize}
-    \item Was muss die Batterie leisten?
-    \item Welche Parameter sind variabel?
-    \item Welche Leistung sollte die Batterie haben?
-    \item Welche Kapazität sollte die Batterie haben?
-\end{itemize}
+\section{Zellen}
+%Welche Rollen spielen die Zellen im Batterie bau?
+Die Zellen in einer Lithium-Ionen-Batterie für E-Bikes spielen eine entscheidende Rolle bei der Speicherung und Bereitstellung elektrischer Energie. Jede Zelle fungiert als eigenständige Energieeinheit, die miteinander kombiniert wird, um die gewünschte Spannung und Kapazität für den E-Bike-Motor zu erreichen. Ihre Aufgaben umfassen die Speicherung von Elektronen während des Ladevorgangs und die Abgabe dieser Elektronen während des Entladevorgangs, um den Motor mit Strom zu versorgen.\\
 
-Parameter der Batterie
-\begin{itemize}
-    \item Volt/Spannung: 48V
-    \item Ampher/Leistung: 20-36A wahrscheinlich nötig
-    \item Ampherstunden/Kapazität: ca. 15-30Ah
-\end{itemize}
+%Wie werden sie verbunden?
+Die Zellen werden in der Batterie durch spezifische Verbindungsmethoden miteinander verbunden. Die Verbindung erfolgt durch das serielle Schalten der Zellen, wodurch die Einzelspannungen addiert werden. Dieser Schritt ermöglicht es, die für den E-Bike-Motor erforderliche höhere Gesamtspannung von 48 Volt zu erreichen. Die meisten Zellen haben 3.6 Volt Nennspannung um auf die 48 Volt zu kommen müssen 13 in Reihe geschaltet werden.\\
 
-Wie viele Zellen muss man in Reihe schalten damit die Spannung 48V beträgt:
-\[ \frac{48V}{3.6V}\approx 13\]
+%Wie ist der schaltplan?
+Die Entscheidung, Zellen in Serie oder parallel zu schalten, beeinflusst maßgeblich die Leistung und Charakteristik der Batterie. Die Reihenschaltung erhöht die Gesamtspannung, während die Parallelschaltung die Gesamtkapazität steigert. Dies hat direkte Auswirkungen auf die Leistungsfähigkeit des E-Bikes. Eine geeignete Kombination von Reihen- und Parallelschaltungen kann die erforderliche Spannung und Kapazität optimieren und somit die Fahrleistung und Reichweite des E-Bikes verbessern.\\
 
-Wie viele Zellen müssen Parallel geschaltet werden um auf die Leistung u. und Kapazität zu kommen:
+nsgesamt spielen die Zellen im Lithium-Ionen-Batteriebau für E-Bikes eine zentrale Rolle, und ihre Verbindung durch Reihen- und Parallelschaltungen ist entscheidend für die Leistungsfähigkeit und Effizienz des Batteriesystems.\\
 
 
-13 in Reihe schalten
-5 Parallel
-65 Zellen
+\subsection{Art der Zellen}
+Bei der Art der Zellen kommen nur zwei in Frage einmal die 21700-Zellen und 18650-Zellen\ref*{fig:1850VS21700}.
 
-\section{Übersicht}
-Ich habe noch ein paar Fragen zur Batterie, der Motor braucht wahrscheinlich 48V. Die Batterie wird wahrscheinlich aus den Samsung 21700-40T oder
-Samsung 21700-50E Zellen gebaut werden. Für mein Rechenbeispiel werde ich die Samsung 21700-40T verwenden, diese hat die Parameter Spannung 3.6V, Entladestrom 9.8, Kapazität - mAh 4.900,00. Um auf ca. 48V zu erreichen, müssen 13 in Reihe geschaltet werden. Und je nachdem, welchen Entladestrom oder Kapazität benötigt werden müssen mehrere Zellen pro Reihe parallel geschaltet werden. Ein normaler E-Bike/S-Pedelec Akku hat eine Kapazität von 10-30Ah Stunden. Der Motor hat voraussichtlich eine Leistung von 1500W, wenn drei Zellen parallel geschaltet sind gibt es einen entladestrom von 29,4 bei einer Spannung von 48V kommt man auf eine Leistung der Batterie von 1375,92W(29,4A*3,6V*13). Man hätte eine Kapazität von 14,7 Ah. \\
- 
-Must-have
-\begin{itemize}
-    \item Zellen /////
-    \item BMS (z.B. 60A, 10S) 10S heißt 10 in Reihe in meinem Fall waere es 13S /////
-    \item Ladegeraet
-    \item Doppelseitiges Klebeband
-    \item Lade und entlade anschluss
-    \item Kaptontape /////
-    \item Kummiabdeckungen für den Pluspol /////
-    \item Kupferdraht /////
-    \item 
-\end{itemize}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=8cm]{images/18650-VS-21700.jpg}
+    \caption{1850 VS 21700\cite{Tritek.12132021}}
+    \label{fig:1850VS21700}
+\end{figure}
 
-Offene Fragen
-\begin{itemize}
-    \item Wie kann die Verbindung am besten zwischen den Zellen herstellt werden ?
-    \item Könnten auch gebrauchte Zellen verwendet werden?
-    \item Wie muss es genau verbunden werden?
-    \item Wo gehen die Kabel hin die aus dem Akku heraus gehen? An welche Adapter wird welches Kabel angeschlossen?
-    \item Wo bekomme ich ein Punktschweiß Geraete her?
-\end{itemize}
+Die Entscheidung zwischen 21700-Zellen und 18650-Zellen für die Batteriekonstruktion von E-Bikes erfordert eine eingehende wissenschaftliche Analyse verschiedener Faktoren. Einer der entscheidenden Aspekte ist die energetische Leistung und Kapazität der Zellen. Die größeren Dimensionen der 21700-Zellen ermöglichen eine höhere Kapazität pro Zelle im Vergleich zu den kleineren 18650-Zellen, was zu einer potenziell höheren Energiedichte führt und somit die Gesamtkapazität und Reichweite der Batterie positiv beeinflussen kann.\\
+
+Ein weiterer wichtiger Aspekt ist die Energieeffizienz und Wärmeentwicklung. Die größere Oberfläche der 21700-Zellen trägt zu einer effizienteren Wärmeableitung bei, was insbesondere in Hochleistungsanwendungen wie E-Bikes von Vorteil ist. Eine verbesserte Wärmeableitung kann die Lebensdauer der Batterie verlängern und eine konstante Leistung unter anspruchsvollen Bedingungen gewährleisten.\\
+
+Zusätzlich sollten technologische Fortschritte berücksichtigt werden. Die spätere Einführung der 21700-Zellen ermöglichte möglicherweise die Integration neuerer Technologien, die sich positiv auf Leistung, Sicherheit und Zuverlässigkeit auswirken. Obwohl 18650-Zellen etabliert und bewährt sind, könnten die neueren 21700-Zellen von Fortschritten in der Batterietechnologie profitieren.\\
+
+Insgesamt legt die wissenschaftliche Analyse nahe, dass die Verwendung von 21700-Zellen aufgrund ihrer potenziell höheren Kapazität, verbesserten Wärmeableitung und der Möglichkeit, von technologischen Fortschritten zu profitieren, für E-Bike-Batterien vorteilhaft sein könnte.\\
 
 
-Löten geht so wie in diesem Video mit Nickband
-\url{https://www.youtube.com/watch?v=e67byImYuL0}
+\subsection{Wahl der Marke}
+Die beiden Zelltypen, Samsung und Lishen, unterscheiden sich in mehreren Schlüsselparametern, die bei der Entscheidung für die Batteriekonstruktion eines E-Bikes berücksichtigt werden sollten.\\
 
-Oder so \url{https://www.youtube.com/watch?v=pptK4TTZr8Q}
-Mit einem Draht
+Die Samsung-Zellen zeichnen sich durch eine höhere Kapazität von 4900 mAh aus, was potenziell zu einer längeren Betriebsdauer des E-Bikes führen könnte. Allerdings liegt der maximale Entladestrom bei 9,8A pro Zelle, was die Leistungsfähigkeit des Motors beeinflussen kann. \\
 
-https://www.sunkko.net/blog/two-types-of-bmss-and-each-wiring-diagram/
+Im Gegensatz dazu bietet die Lishen-Zelle eine Kapazität von 4000 mAh, was etwas niedriger ist als bei Samsung. Allerdings ermöglicht sie einen höheren maximalen Entladestrom von 12A pro Zelle. Ein zusätzlicher Vorteil könnte sein, dass die Lishen-Zellen preiswerter sind, was eine wirtschaftliche Alternative darstellen könnte.\\
+
+In einer Batteriekonfiguration für E-Bikes spielt die Anzahl der parallel geschalteten Zellen eine entscheidende Rolle für die Entladeleistung. Wenn weniger Zellen parallel geschaltet sind, bedeutet dies, dass die Gesamtkapazität der Batterie reduziert ist. Um dennoch die erforderliche Leistung bereitzustellen, muss der Entladestrom pro Zelle erhöht werden. Es gibt auch Zellen die einen Entladestrom von 35 Ampher liefern.
+
+Die Entscheidung zwischen diesen Zellen hängt von den spezifischen Anforderungen des E-Bike-Projekts ab. Wenn eine längere Reichweite und eine höhere Kapazität priorisiert werden, könnten die Samsung-Zellen die bessere Wahl sein. Wenn jedoch eine höhere Leistungsfähigkeit des Motors und ein wirtschaftlicher Preis im Vordergrund stehen, könnte die Lishen-Zelle die geeignetere Option sein. Es ist ratsam, die Projektspezifikationen und das Budget sorgfältig zu prüfen, um die optimale Zellwahl zu treffen.\\
+
+Es wurde sich für die Lishen-Zellen entschieden, da sie am billigsten waren und auch mehrer Parallel geschaltet werden um eine erhöhte Kapazität zuerreichen einher geht auch das genug leistung von der Batterie geleistet werden kann. Es werden 13 in Reihegeschaltet um 48 Volt zuerreichen, 5 parallel für eine Kapazität von 20 Ampherstunden und einen maximalen Entladestrom von 60 Ampher. Hier ist die Berechnung: \ref*{eq:Strom}. Die Begründung warum genau fünf parallel geschaltet werden findet man hier:\ref{introduction}\\
+
+\begin{align}
+    A_{\textrm{Battery}} =& 12 A\cdot 5 = 60 A\\
+    V_{\textrm{Battery}} =& 3.6V \cdot 13 = 46.8V\\
+    \textrm{Kapazität} =& 4000mAh \cdot 5 = 20 Ah
+    \label{eq:Strom}
+\end{align}
+
+\section{Batterie Management System}
+%Was ist ein BMS?
+%Wie funkitoniert ein BMS?
+%Wozu braucht man ein BMS?
+%Wovor schützt ein BMS?
+%Für welches BMS wurde ich entschieden?
+%balanced VS only monetoring
+%Wie schließt man ein BMS an?
+%Wie sieht der schaltplan aus?
 
 
-\section{Ladegeraet}
+\section{Verbindung zwischen den Zählen}
 
-\section{Wahl des BMS}
-
-Ich habe die Lishen Zellen bestellt 65 davon ich will 5 von diesen Parallel schalten.
-Für diese will ich folgendes BMS verwenden 
-https://www.lithiumbatterypcb.com/product/13s-48v-li-ion-battery-pcb-board-54-6v-lithium-bms-with-60a-discharge-current-for-electric-motorcycle-and-e-scooter-protection-2-2-3-2-2-2-2-2/
-Es ist ausgelegt auf eine Leistung von 60A 
-
-13S5P 
-
-Welches eine Leistung von 60 A ausgelegt ist 
-
-\section{Adpter fuer die Batterie}
-Welche Anschluesse hat die Batterie?
-
-
-\section{Verbindung zwischen den Zellen}
-Löten oder Punktschweißen
-
-Löten nicht stabil zu hohe belastung auf den Zellen. Wiederstand an den Zellen ist sehr Hoch können auch durch brennen was aber nicht schlimm sein muss .
-Wie Löten?
-Es braucht einen recht hochen Querschnitt da die Zellen einen recht hochem Entladestrom leisten. Rechnung:
-\begin{itemize}
-    \item Meschisch nicht so stabil
-    \item Wiederstang sehr hoch wenn nicht gut verlötet
-    \item braucht mehr Platz
-    \item braucht ewig
-    \item man braucht einen hochen Querschnitt
-\end{itemize}
-
-Punktschweißen
-\begin{itemize}
-    \item standard
-    \item geringe hitze aud den Batterien
-    \item meschanisch stabiler
-    \item geht schneller
-    \item 
-\end{itemize}
-Dinge die man braucht:
-\begin{itemize}
-    \item 220v 3-6A puch buttom
-    \item 10mm Kupferdraht
-    \item 6mm Kupferdraht
-    \item Wie funktioniert ein Trafo
-\end{itemize}
-\url{https://www.youtube.com/watch?v=o5eej4MSotk}
-Wie funktioniert ein trafo
-\url{https://www.youtube.com/watch?v=rTVu1lZMPG0}
-Rechnung für den trafo
+\subsection{Löten vs. Punktscheißen}
 
 \section{Punktschweißgerät}
-Wie funktioniert schweißen?
-Welchen Strom braucht man dazu?
-Wie funktioniert ein Trafo?
-Wo bekommt man einen Trafo her ?
-Wie entfernt man den Sekundären block?
-Problem micht den Primären Block beschädigen
-Wie winkelt man den den Sekundären Block?
-Wie stellt man die Halterung her?
-Welchen durchschnitt brauchen die Spitzen?
-Welche Optionen gibt es anzuschalten?
-...
 
-\section{Schlatplan}
-Batterien verbindungen mit Doppelseitigem Klebeband
- 
-Punktscheißen mit dünneren schienen da sonst kurz schluss
-Punktscheiß gerät wird sehr Heiß 
-spitzen verrutschen 
-Taster bleibt an 
-Holz gibt nach
+\section{Konstruktion der Batterie}
 
-Reihenschaltung ebensfalls 
-Am gesammten Pulspol abgesichert 
-dann das BMS angeschlossen die Temperatursensoren auf der Batterie verteilt
-die veschieden drähte nachschalt plan auf der Batterie verteilen und durch messen 
-ne Problemen selbst erneut verleuten
-
-Dann anschließen und mit der App verbinden
-Man musste noch schauen wo die alle drähter genau hin müssen
-
-B- zu batterie Minus
-C- zu Minus des verbrauchers
-Puls der Batterie zum Puls des verbrauchers
-
-Dannach mit kartonsche verwickelt
-\section{Batterie Hülle}
-https://www.youtube.com/watch?v=1WqAEA9_mMw
-mehrer Optionen fertige hülle kaufen mit Nickel schreifen 
-Oder selbst eine Box bauen aus holz oder 
-eine Hülle aus dem 3d drucker
-
-
-
-https://www.lithiumbatterypcb.com/product/13s-48v-li-ion-battery-pcb-board-54-6v-lithium-bms-with-60a-discharge-current-for-electric-motorcycle-and-e-scooter-protection-2-2-3-2-2-2-2-2/
-
-
-https://www.lithiumbatterypcb.com/smart-bms-software-download/
-
-
+\subsection{Wahl des Anschlusses}
