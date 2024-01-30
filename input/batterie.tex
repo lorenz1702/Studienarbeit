@@ -73,22 +73,92 @@ Es wurde sich für die Lishen-Zellen entschieden, da sie am billigsten waren und
     \label{eq:Strom}
 \end{align}
 
-\section{Batterie Management System}
+\section{Auswahl und Begründung eines Balancing-Battery Management Systems}
 %Was ist ein BMS?
+Ein entscheidender Aspekt bei der Konstruktion von Lithium-Ionen-Batterien für E-Bikes ist die Wahl des richtigen Battery Management Systems (BMS). Dieser Abschnitt erläutert die Funktionen, den Auswahlprozess und die Entscheidungsgrundlagen für die Verwendung eines Balancing-BMS anstelle eines BMS, das lediglich Überwachungsfunktionen bietet.\\
 %Wie funkitoniert ein BMS?
+Ein BMS ist ein elektronisches System, das die Leistung und Sicherheit von Lithium-Ionen-Batterien überwacht und regelt. In seiner Grundfunktion überwacht es Parameter wie Spannung, Strom, Temperatur und Ladezustand. Zudem bietet es Schutzmechanismen, um Überladung, Tiefentladung und Überhitzung zu verhindern.\\
+%balanced VS only monetoring
+Es gibt zwei Haupttypen von BMS: solche, die lediglich Überwachungsfunktionen bereitstellen, und solche, die auch ein sogenanntes Balancing implementieren. Balancing bedeutet, dass das BMS aktiv eingreift, um sicherzustellen, dass alle Zellen in der Batterie während des Lade- und Entladevorgangs ähnliche Spannungen aufweisen.\\
+
+%Zweck und Vorteile eines Balancing-BMS:
+Die Entscheidung für ein Balancing-BMS basiert auf der Notwendigkeit, eine gleichmäßige Verteilung der Spannung über alle Zellen hinweg sicherzustellen. Dieser Prozess ist entscheidend, um die Lebensdauer der Batterie zu verlängern und eine optimale Leistung zu gewährleisten. Im Gegensatz dazu konzentriert sich ein BMS mit ausschließlich Überwachungsfunktionen darauf, die Parameter zu überwachen, ohne aktiv in den Ladungsausgleich zwischen den Zellen einzugreifen.\\
+%Warum ist es nicht gut wenn die Spannung der Zellen variert?
+Die Variation der Spannung zwischen den Zellen in einer Batterie ist problematisch, da sie zu mehreren negativen Effekten führen kann, die die Leistungsfähigkeit, Sicherheit und Lebensdauer der Batterie beeinträchtigen.\\
+
+Wenn die Spannung zwischen den Zellen variiert, kann dies zu einer ungleichmäßigen Entladung führen. Einige Zellen können schneller entladen werden als andere, was zu einem Ungleichgewicht in der Kapazitätsnutzung führt. Dies führt zu einer verkürzten Laufzeit und einer ineffizienten Nutzung der gesamten Batteriekapazität.\\
+
+Eine Variation der Spannung birgt das Risiko von Überladung für einzelne Zellen. Wenn eine Zelle eine höhere Spannung aufweist als andere, besteht die Gefahr, dass sie über ihre Nennspannung hinausgeladen wird. Überladung kann zu einer thermischen Instabilität führen, was wiederum zu Sicherheitsrisiken wie Überhitzung, Bränden oder sogar Explosionen führen kann.\\
+
+Umgekehrt kann eine zu niedrige Spannung in einer einzelnen Zelle bei Entladung auftreten. Dies kann zu einer Tiefentladung führen, was die Lebensdauer der Zelle drastisch verkürzt und zu irreparablen Schäden führen kann.\\
+
+Ungleichmäßige Spannungsverteilung kann zu einer ungleichen Alterung der Zellen führen. Einige Zellen altern schneller als andere, was zu einem vorzeitigen Versagen der Batterie führen kann. Eine ausgeglichene Spannungsverteilung trägt dazu bei, die Lebensdauer der gesamten Batterie zu maximieren.\\
+
+Eine ungleichmäßige Spannungsverteilung kann die Leistungsfähigkeit des Gesamtsystems beeinträchtigen. Insbesondere bei elektrischen Anwendungen wie E-Bikes kann dies zu einer unzureichenden Leistung und einer verringerten Reichweite führen.\\
+%Begründung für die Entscheidung:
+Die Wahl eines Balancing-BMS für die E-Bike-Batteriekonstruktion wurde aufgrund der Fokussierung auf eine maximal homogene Spannungsverteilung getroffen. Durch das aktive Balancing wird vermieden, dass einzelne Zellen aufgrund unterschiedlicher Lade- und Entladezyklen eine Ungleichgewichtssituation erfahren. Dies trägt nicht nur zur Verbesserung der Batterielebensdauer bei, sondern optimiert auch die gesamte Leistungsfähigkeit des E-Bike-Akkus.\\
+
+Die Entscheidung für ein Balancing-BMS basierte auf der Zielsetzung, eine Batterie zu konstruieren, die nicht nur effizient und leistungsstark ist, sondern auch eine langfristige Zuverlässigkeit und Haltbarkeit gewährleistet.\\
 %Wozu braucht man ein BMS?
 %Wovor schützt ein BMS?
 %Für welches BMS wurde ich entschieden?
-%balanced VS only monetoring
+
 %Wie schließt man ein BMS an?
 %Wie sieht der schaltplan aus?
+siehe schaltplan der gezeichnet wurde
+und der schaltplan auf der Webseite
 
 
 \section{Verbindung zwischen den Zählen}
 
-\subsection{Löten vs. Punktscheißen}
 
+\subsection{Löten vs. Punktscheißen}
+Löten 
+-schnell
+-nicht stabil
+-es wurde ein test gemacht hier bild ein blenden
+-wenn nicht stabil hocher winderstand
+-Hitze auf den Batterien genau gefahren kann in die Luft gehen
+-Sicherung doch dünne drähte
+-mehr platz für 
+-Versuchsbeschreibung in einer Wissenschaftlichen Arbeit
+
+Punktzuschweißen
+-standard
+-sehr stabil
+-geringer Hitze auf den Batterien
+-
+
+Meschanisch verbinden
+-am besten und am sicherseten
+-kosten intensive
+-schwer viel platz wird gebraucht
 \section{Punktschweißgerät}
+%Wie funktioniert schweißen?
+%wie bewegen sich elektronen
+%Welcher strom wird gebraucht?
+%Man braucht einen Transformator?
+%wie funktioniert einen transformator?
+
+%Wo bekommt man einen transformator her?
+
+%Wie muss man den transformator verändern?
+
+%Wie kann man den Sekundären Block sicher entfernen?
+
+%Weitere Probleme?
+
+%Versuchs beschreibung in einer Wissenschaftlichen arbeit?
+%Neuer Transformator?
+
+%Wie muss der Transformator gewickelt werden? 
+
+%Wie funktioniert die Transformator formel?
+
+%Wie schaltet man das Punktschweißgerät ein?
+%Controller
+%schalter
+%Taster
 
 \section{Konstruktion der Batterie}
 
