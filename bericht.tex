@@ -10,7 +10,7 @@
 
 \usepackage[utf8]{inputenc}    
 \usepackage{bericht}
-
+\usepackage{lscape} % oder pdflscape für PDF-Ausgabe
 \usepackage{amsmath}% WICHTIG: AMS-Pakete laden
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -103,7 +103,7 @@ Gutachter der Studienakademie	 & \BetreuerDHBW		\\
 
 \newpage
 \tableofcontents           % Inhaltsverzeichnis hier ausgeben
-%\listoffigures             % Liste der Abbildungen
+\listoffigures             % Liste der Abbildungen
 %\listoftables              % Liste der Tabellen
 %\lstlistoflistings         % Liste der Listings
 %\listofequations           % Liste der Formeln
@@ -121,11 +121,15 @@ Gutachter der Studienakademie	 & \BetreuerDHBW		\\
 \include{input/steuergerät}
 \include{input/motor}
 \include{input/Schaltung}
+\include{input/Konstruktion}
+
 
 
 % Ab hier beginnt der Anhang
 \appendix
 \addcontentsline{toc}{chapter}{Anhang}
+
+\input{input/Anhang}
 
 \addcontentsline{toc}{chapter}{Index}
 \printindex

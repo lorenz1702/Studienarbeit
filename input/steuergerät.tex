@@ -1,5 +1,5 @@
 
-\chapter{Steuergerät programmieren}
+\chapter{Steuergerät}
 Ein unverzichtbarer Bestandteil des E-Bike-Systems ist das Steuergerät, das die verschiedenen Betriebsmodi des Controllers steuert. Dieses Steuergerät ermöglicht es dem Fahrer, die Einstellungen und Leistungsparameter des E-Bikes je nach Bedarf anzupassen.\\
 
 Die Umsetzung des Steuergeräts kann auf verschiedene Arten erfolgen:\\
@@ -12,3 +12,55 @@ Die Wahl zwischen einem einfachen Schalter und einem anpassbaren Display hängt 
 
 Das Steuergerät spielt eine entscheidende Rolle dabei, die E-Bike-Fahrerfahrung anzupassen und zu personalisieren. In den folgenden Abschnitten werden wir uns mit weiteren Aspekten des E-Bike-Baus beschäftigen, einschließlich der Anpassung der Gangschaltung und der Vorbereitung des Fahrrads für die erhöhte Kraftauswirkung der elektrischen Unterstützung.\\
 %Der Kontroller braucht auch ein Steuergeraet welchhe die verschiedenen Modi umschaltet. Dies kann durch einen einfachen Schalter umgesetzt werden oder eine Display kann angepasst werden.
+
+Ein Fahrrad-Bordcomputer kann in einigen Fällen auch verwendet werden, um Motorparameter bei E-Bikes festzulegen.
+\section{Steuergerät warum}
+Ein Fahrrad-Bordcomputer bietet eine Vielzahl von Gründen und Vorteilen, die das Fahrerlebnis bei E-Bikes verbessern können.
+
+Zunächst einmal ist es wichtig zu erwähnen, dass die Verwendung eines Fahrrad-Bordcomputers nicht unbedingt erforderlich ist, um ein E-Bike zu betreiben. Viele Controller ermöglichen es dem Fahrer, den Motor mithilfe einer Throttle oder eines Tretlager-Sensors zu starten. Jedoch bietet ein Fahrrad-Bordcomputer zusätzliche Kontrolle über das Fahrzeug, was zu einer verbesserten Fahrt führen kann.
+
+Ein entscheidender Punkt ist die Kontrolle über die Beschleunigung. Mit einer Throttle kann der Fahrer das Drehgas langsam aufdrehen und so die Beschleunigung kontrollieren. Im Gegensatz dazu gibt ein Tretlager-Sensor nur an, ob gerade getreten wird, und der Motor gibt automatisch die volle Beschleunigung. Dies kann zu unerwünschten Situationen und Gefahren führen, insbesondere in anspruchsvollen Gelände oder beim Starten an Steigungen.
+
+Ein weiterer wichtiger Aspekt ist die Möglichkeit, Motorparameter über den Bordcomputer einzustellen. Zum Beispiel bieten viele E-Bikes verschiedene Unterstützungsstufen, die bestimmen, wie viel zusätzliche Leistung der Elektromotor beim Treten bietet. Über den Bordcomputer kann der Fahrer die gewünschte Unterstützungsstufe auswählen, die seinen Vorlieben und den Anforderungen der Strecke entspricht.
+
+Darüber hinaus ermöglicht der Bordcomputer die Anpassung der maximalen Geschwindigkeit des Motors. Dies ist besonders nützlich, um die Konformität mit lokalen Vorschriften einzuhalten oder persönliche Präferenzen zu berücksichtigen.
+
+Die Einstellung des Startverhaltens ist ein weiterer relevanter Punkt. Sie beeinflusst, wie schnell der Motor reagiert, wenn der Fahrer mit dem Treten beginnt. Einige E-Bikes bieten die Möglichkeit, zwischen verschiedenen Startmodi zu wählen, was den Fahrkomfort und die Sicherheit verbessert.
+
+Des Weiteren kann der Bordcomputer den Rekuperationsmodus steuern, der bestimmt, wie stark der Motor beim Bremsen oder Bergabfahren Energie zurückgewinnt. Dies trägt nicht nur zur Effizienz des E-Bikes bei, sondern auch zur Erhöhung der Reichweite.
+
+Zusammenfassend bietet ein Fahrrad-Bordcomputer zahlreiche Funktionen, die das Fahrerlebnis bei E-Bikes verbessern können. Von der Kontrolle über die Beschleunigung bis zur Anpassung von Motorparametern bietet der Bordcomputer eine Vielzahl von Möglichkeiten, um die Fahrt sicherer, komfortabler und individueller zu gestalten. 
+
+
+\section{Wahl des Steuergeräts}
+ 
+Zunächst ist es nicht nötig ein Steuergerät(einen Fahrrad-Bordcomputer) zu verwenden die meisten Controller ermöglichen es den Motor mit einer Throttle oder einem PSA(Tretlager Sensor) zu Starten. Jedoch ist es möglich mit einem Steuergerät einen Bessere Kontroller über das Fahrzeug zu bekommen. Bei der Throttle kann man das Drehgas langsam aufdrehen und so die Beschleunigung Beding kontrollieren jedoch ist dies bei einem PSA Sensor nicht möglich dieser gibt nur aus ob gerade getreten wird und der Motor würde die volle Beschleunigung geben, was zu Gefahren führen kann. 
+
+Des weitern kann Ein Fahrrad-Bordcomputer kann in einigen Fällen auch verwendet werden, um Motorparameter bei E-Bikes festzulegen.     Unterstützungsstufen: Viele E-Bikes bieten verschiedene Unterstützungsstufen, die festlegen, wie viel zusätzliche Leistung der Elektromotor beim Treten bietet. Über den Bordcomputer können Sie die gewünschte Unterstützungsstufe auswählen, die Ihren Vorlieben und den Anforderungen der Strecke entspricht.
+
+Maximale Geschwindigkeit: Einige E-Bike-Modelle ermöglichen es Ihnen, die maximale unterstützte Geschwindigkeit des Motors einzustellen. Dies kann hilfreich sein, um die Konformität mit lokalen Vorschriften oder persönliche Präferenzen zu gewährleisten.
+
+Startverhalten: Die Einstellung des Startverhaltens kann beeinflussen, wie schnell der Motor reagiert, wenn Sie mit dem Treten beginnen. Einige E-Bikes bieten die Möglichkeit, zwischen verschiedenen Startmodi zu wählen, z. B. einen sanften oder einen sportlichen Start.
+
+Rekuperationsmodus: Bei einigen E-Bikes können Sie über den Bordcomputer den Rekuperationsmodus einstellen, der bestimmt, wie stark der Motor beim Bremsen oder Bergabfahren Energie zurückgewinnt.
+
+Motorleistung: Fortgeschrittenere E-Bike-Modelle bieten möglicherweise die Möglichkeit, die Leistung des Motors einzustellen, z. B. die maximale Leistungsausgabe oder das Drehmoment. Dies kann je nach Fahrerpräferenz und Fahrbedingungen angepasst werden.
+
+
+
+%Zwei steuergerät welche funktionen haben sie?
+
+%KT LCD4
+Es wurde sich für das 
+
+
+Welches ist besser?
+
+
+\section{Programmierung des Steuergeräts}
+
+Kann man die Geschwindigkeit mit dem Steuergerät verwenden?
+
+Welche Sensoren gibt es?
+
+Welche
