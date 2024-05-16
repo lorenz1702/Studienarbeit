@@ -1,0 +1,88 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: bericht.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: biblatex.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+Reallocating 'name_of_file' (item size: 1) to 8 items.
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: input/einleitung.aux
+Reallocating 'name_of_file' (item size: 1) to 19 items.
+A level-1 auxiliary file: input/batterie.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: input/motor.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: input/Controller.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
+A level-1 auxiliary file: input/steuergerät.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+A level-1 auxiliary file: input/Schaltung.aux
+Reallocating 'name_of_file' (item size: 1) to 23 items.
+A level-1 auxiliary file: input/Konstruktion.aux
+Reallocating 'name_of_file' (item size: 1) to 16 items.
+A level-1 auxiliary file: input/Fazit.aux
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: bericht-blx.bib
+Database file #2: bericht.bib
+Warning--I didn't find a database entry for "Tritek.12132021"
+Warning--I didn't find a database entry for ".02.03.2024"
+Warning--I didn't find a database entry for "LorenzScherrer.02.03.2024"
+Biblatex version: 3.16
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 10 entries,
+            6393 wiz_defined-function locations,
+            1261 strings with 16077 characters,
+and the built_in function-call counts, 38913 in all, are:
+= -- 943
+> -- 3436
+< -- 336
++ -- 3016
+- -- 2924
+* -- 1668
+:= -- 4456
+add.period$ -- 0
+call.type$ -- 10
+change.case$ -- 55
+chr.to.int$ -- 330
+cite$ -- 18
+duplicate$ -- 3385
+empty$ -- 3506
+format.name$ -- 92
+if$ -- 6036
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 0
+newline$ -- 224
+num.names$ -- 82
+pop$ -- 2914
+preamble$ -- 1
+purify$ -- 52
+quote$ -- 0
+skip$ -- 1120
+stack$ -- 0
+substring$ -- 1803
+swap$ -- 1285
+text.length$ -- 288
+text.prefix$ -- 9
+top$ -- 1
+type$ -- 328
+warning$ -- 0
+while$ -- 369
+width$ -- 0
+write$ -- 215
+(There were 3 warnings)

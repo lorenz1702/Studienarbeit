@@ -4,7 +4,7 @@
 <PrintReportSettings paper_size_enum="9" sheet_size_x="210" sheet_size_y="297" color_bg_even="15727333" color_bg_header="8454143" color_grid="16777215"/>
 <PrinterSettings PaperSizeX="2970" PaperSizeY="2100" PhysicalOffestTenthMm_X="0" PhysicalOffestTenthMm_Y="0"/>
 <tb use="1" name="C:\Users\Public\Documents\ProfiCAD Library\_TB\standard9.ptb"/>
-<PageSettings bgColor="FFFFFF" zoom="300" frame="YES" showT="YES" showV="YES" includeMargins="YES"/>
+<PageSettings bgColor="FFFFFF" zoom="50" frame="YES" showT="YES" showV="YES" includeMargins="YES"/>
 <RefGridSettings FieldSize="50"/>
 <NumberingWire Over="1" Digits="3" TypeRenumbering="0" ShowWireName="0" WireLabelDist_a="4" WireLabelDist_b="10" WireLabelDist_c="7"/>
 <summary>
@@ -592,6 +592,7 @@
 <polyline pts="1900,900,1900,600,"/>
 <polyline pts="1900,600,2020,600,"/>
 <wire pts="260,600,260,540," drop1="1"/>
+<wire pts="2020,600,2020,620," drop1="1"/>
 </layer>
 </layers>
 </page>

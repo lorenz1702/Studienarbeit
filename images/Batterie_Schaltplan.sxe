@@ -4,24 +4,16 @@
 <PrintReportSettings paper_size_enum="9" sheet_size_x="210" sheet_size_y="297" color_bg_even="15727333" color_bg_header="8454143" color_grid="16777215"/>
 <PrinterSettings PaperSizeX="2970" PaperSizeY="2100" PhysicalOffestTenthMm_X="0" PhysicalOffestTenthMm_Y="0"/>
 <tb use="1" name="C:\Users\Public\Documents\ProfiCAD Library\_TB\standard9.ptb"/>
-<PageSettings bgColor="FFFFFF" zoom="50" frame="YES" showT="YES" showV="YES" includeMargins="YES"/>
+<PageSettings bgColor="FFFFFF" zoom="75" frame="YES" showT="YES" showV="YES" includeMargins="YES"/>
 <RefGridSettings FieldSize="50"/>
 <NumberingWire Over="1" Digits="3" TypeRenumbering="0" ShowWireName="0" WireLabelDist_a="4" WireLabelDist_b="10" WireLabelDist_c="7"/>
 <summary>
-<field name="Abteilung" value=""/>
-<field name="DocStatus" value=""/>
-<field name="DokArt" value=""/>
-<field name="Genehmigt" value=""/>
-<field name="Sachnummer" value=""/>
-<field name="Spr" value=""/>
-<field name="Titel" value=""/>
-<field name="TitelZusatz" value=""/>
-<field name="_pcs" value=""/>
-<field name="_sc" value=""/>
-<field name="author" value=""/>
+<field name="DocStatus" value="Abgeschlossen"/>
+<field name="DokArt" value="Schaltplan"/>
+<field name="Spr" value="Deutsch"/>
+<field name="Titel" value="Batterie-Schaltplan"/>
+<field name="author" value="Lorenz Scherrer"/>
 <field name="date" value="23/10/2023"/>
-<field name="rev" value=""/>
-<field name="techRef" value=""/>
 </summary>
 <repo>
 <ppd name="Elektronik\passive Komponenten\Lampen und Signaleinrichtungen\Batterie.ppd" t="B" fG="9da6b4b6-4c12-40fc-bccc-63ab70d0a95e" lG="a442a450-d3b0-464b-a83e-087f46573482">
@@ -593,6 +585,110 @@
 <polyline pts="1900,600,2020,600,"/>
 <wire pts="260,600,260,540," drop1="1"/>
 <wire pts="2020,600,2020,620," drop1="1"/>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="440" y="120">
+<attributes>
+<attribute name="_ref" value="B53" v="0" al="6" x="395" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="395" y="140"/>
+</attributes>
+</elem>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="560" y="120">
+<attributes>
+<attribute name="_ref" value="B54" v="0" al="6" x="515" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="515" y="140"/>
+</attributes>
+</elem>
+<wire pts="500,120,500,200," drop1="1" drop2="1"/>
+<wire pts="458,120,540,120,"/>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="680" y="120">
+<attributes>
+<attribute name="_ref" value="B55" v="0" al="6" x="635" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="635" y="140"/>
+</attributes>
+</elem>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="800" y="120">
+<attributes>
+<attribute name="_ref" value="B56" v="0" al="6" x="755" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="755" y="140"/>
+</attributes>
+</elem>
+<wire pts="740,120,740,200," drop1="1" drop2="1"/>
+<wire pts="698,120,780,120,"/>
+<wire pts="620,120,620,200," drop1="1" drop2="1"/>
+<wire pts="578,120,660,120,"/>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="920" y="120">
+<attributes>
+<attribute name="_ref" value="B57" v="0" al="6" x="875" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="875" y="140"/>
+</attributes>
+</elem>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1040" y="120">
+<attributes>
+<attribute name="_ref" value="B58" v="0" al="6" x="995" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="995" y="140"/>
+</attributes>
+</elem>
+<wire pts="980,120,980,200," drop1="1" drop2="1"/>
+<wire pts="938,120,1020,120,"/>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1160" y="120">
+<attributes>
+<attribute name="_ref" value="B59" v="0" al="6" x="1115" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="1115" y="140"/>
+</attributes>
+</elem>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1280" y="120">
+<attributes>
+<attribute name="_ref" value="B60" v="0" al="6" x="1235" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="1235" y="140"/>
+</attributes>
+</elem>
+<wire pts="1220,120,1220,200," drop1="1" drop2="1"/>
+<wire pts="1178,120,1260,120,"/>
+<wire pts="1100,120,1100,200," drop1="1" drop2="1"/>
+<wire pts="1058,120,1140,120,"/>
+<wire pts="860,120,860,200," drop1="1" drop2="1"/>
+<wire pts="818,120,900,120,"/>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1400" y="120">
+<attributes>
+<attribute name="_ref" value="B61" v="0" al="6" x="1355" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="1355" y="140"/>
+</attributes>
+</elem>
+<wire pts="1340,120,1340,200," drop1="1" drop2="1"/>
+<wire pts="1298,120,1380,120,"/>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1520" y="120">
+<attributes>
+<attribute name="_ref" value="B62" v="0" al="6" x="1475" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="1475" y="140"/>
+</attributes>
+</elem>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1640" y="120">
+<attributes>
+<attribute name="_ref" value="B63" v="0" al="6" x="1595" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="1595" y="140"/>
+</attributes>
+</elem>
+<wire pts="1580,120,1580,200," drop1="1" drop2="1"/>
+<wire pts="1538,120,1620,120,"/>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1760" y="120">
+<attributes>
+<attribute name="_ref" value="B64" v="0" al="6" x="1715" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="1715" y="140"/>
+</attributes>
+</elem>
+<elem lG="a442a450-d3b0-464b-a83e-087f46573482" x="1880" y="120">
+<attributes>
+<attribute name="_ref" value="B65" v="0" al="6" x="1835" y="100"/>
+<attribute name="_type" value="" v="0" al="6" x="1835" y="140"/>
+</attributes>
+</elem>
+<wire pts="1820,120,1820,200," drop1="1" drop2="1"/>
+<wire pts="1778,120,1860,120,"/>
+<wire pts="1700,120,1700,200," drop1="1" drop2="1"/>
+<wire pts="1658,120,1740,120,"/>
+<wire pts="1460,120,1460,200," drop1="1" drop2="1"/>
+<wire pts="1418,120,1500,120,"/>
+<wire pts="1898,120,1940,120,1940,200,1898,200,"/>
+<wire pts="422,120,360,120,360,200,422,200,"/>
 </layer>
 </layers>
 </page>
