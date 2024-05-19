@@ -4,7 +4,8 @@
 
 \chapter{Batterie}\label{introduction}
 Die Kernkomponente dieser Arbeit wird der Bau der Batterie sein, die den Motor des E-Bikes antreiben wird.
-Hierbei werde ich größere Lithium-Ionen-Zellen verwenden und diese in einer geeigneten Konfiguration zusammenschließen, um die benötigte Spannung und Kapazität zu erreichen. Zudem wird ein Smart Battery Management System (BMS) eingesetzt, um die Sicherheit und Effizienz der Batterie zu gewährleisten.\\
+Hierbei werde ich größere Lithium-Ionen-Zellen verwenden und diese in einer geeigneten Konfiguration zusammenschließen, um die benötigte Spannung und Kapazität zu erreichen.
+Zudem wird ein Smart Battery Management System (BMS) eingesetzt, um die Sicherheit und Effizienz der Batterie zu gewährleisten.\\
 
 Des Weiteren liegt im Fokus die Programmierung des Controllers.
 Ich will die Motordaten und die Leistung flexibel anpassen, um das E-Bike sowohl Straßen tauglich zu machen (maximale Leistung 250W), als auch zu testen, welche Leistung ein 1500W Motor erreicht (bringt) (auf einem Privatgrundstück).\\
@@ -17,7 +18,7 @@ Im vorliegenden Abschnitt wird detailliert auf die Fertigung einer individuellen
 Die Batterie muss den spezifizierten Anforderungen hinsichtlich Leistung, Form und Stabilität entsprechen.
 In Bezug auf die Leistung ist eine Spannung von 48 Volt erforderlich, um den Motor zu versorgen.
 Damit die gewünschte Leistung gewährleistet wird, muss die Batterie eine Leistung von 1500 Watt bereitstellen.
-Eine Berechnung erfolgt mit dieser Formel~\ref{eq:wattformel}:
+Eine Berechnung erfolgt mit nachfolgender Formel~\ref{eq:wattformel}:
 \begin{equation}
     P = U \cdot I \longrightarrow I = \frac{P}{U}= \frac{1500W}{48V}= 31.25
     \label{eq:wattformel}
@@ -56,7 +57,7 @@ Bei der Art der Zellen kommen nur zwei in Frage: einmal die 21700-Zellen und 186
 \begin{figure}[h]
     \centering
     \includegraphics[width=8cm]{images/18650-VS-21700.jpg}
-    \caption{1850 VS 21700\cite{Tritek.12132021}}
+    \caption{18650 VS 21700\cite{tritek_21700_2021}}
     \label{fig:1850VS21700}
 \end{figure}
 
@@ -65,7 +66,7 @@ Bei der Art der Zellen kommen nur zwei in Frage: einmal die 21700-Zellen und 186
 
 Die Entscheidung zwischen 21700-Zellen und 18650-Zellen für die Batterie-Konstruktion von E-Bikes erfordert eine eingehende wissenschaftliche Analyse verschiedener Faktoren.
 Einer der entscheidenden Aspekte ist die energetische Leistung und Kapazität der Zellen.
-Die größeren Dimensionen der 21700-Zellen ermöglichen eine höhere Kapazität pro Zelle im Vergleich zu den kleineren 18650-Zellen, was zu einer potenziell höheren Energiedichte führt und somit die Gesamtkapazität und Reichweite der Batterie positiv beeinflussen kann.\\
+Die größeren Dimensionen der 21700-Zellen ermöglichen eine höhere Kapazität pro Zelle im Vergleich zu den kleineren 18650-Zellen, dies zu einer potenziell höheren Energiedichte führt und somit die Gesamtkapazität und Reichweite der Batterie positiv beeinflussen kann.\\
 
 Die Verwendung von 21700-Zellen bietet eine Reihe von Vorteilen, die das Preis-Leistungs-Verhältnis im Vergleich zu 18650-Zellen verbessern.
 Zum einen sind 21700-Zellen aufgrund ihrer höheren Energiedichte kosteneffizienter, da sie eine größere Kapazität pro Zelle bieten.
@@ -80,7 +81,7 @@ Im Zuge dieser Untersuchung wurde auch ein defekter Rasenmäher-Akku analysiert 
 Dieser konnte die Leistung nicht mehr erbringen, da eine der 18650-Zellen ausgefallen war.
 Ein Bild des Rasenmäher-Akkus findet sich im Anhang\ref{fig:20}.\\
 
-Zusammenfassend lässt sagen, dass die Verwendung von 21700-Zellen aufgrund ihrer potenziell höheren Kapazität, verbesserten Wärmeableitung und der Möglichkeit, von technologischen Fortschritten zu profitieren, für E-Bike-Batterien vorteilhaft sein könnte.
+Zusammenfassend lässt sich sagen, dass die Verwendung von 21700-Zellen aufgrund ihrer potenziell höheren Kapazität, verbesserten Wärmeableitung und der Möglichkeit, von technologischen Fortschritten zu profitieren, für E-Bike-Batterien vorteilhaft sein könnte.
 
 
 
@@ -112,7 +113,7 @@ Sie sind am billigsten und es können mehrere parallel geschaltet werden, damit 
 Entscheidend ist, dass der Akku genug Leistung zur Verfügung stellen kann.\\
 
 Es werden 13 Zellen in Reihe geschaltet, um 48 Volt zu erreichen, 5 parallel für eine Kapazität von 20 Amperestunden und einen maximalen Entladestrom von 60 Amper.
-Hier ist die Berechnung:~\ref{eq:Strom}.
+Siehe Berechnung:~\ref{eq:Strom}.
 Die Begründung, weshalb 5 parallel geschaltet werden, ist nachstehend zu sehen: \ref{introduction}
 
 \begin{align}
@@ -122,7 +123,7 @@ Die Begründung, weshalb 5 parallel geschaltet werden, ist nachstehend zu sehen:
     \label{eq:Strom}
 \end{align}
 
-Hier sieht ist der Schaltplan einer solchen Batterie mit BMS:\ref{fig:5}
+In der Abbildung \ref{fig:5} ist der Schaltplan einer solchen Batterie mit BMS dargestellt.
 
 
 
@@ -132,7 +133,7 @@ Hier sieht ist der Schaltplan einer solchen Batterie mit BMS:\ref{fig:5}
 \section{Battery Management Systems}
 %Was ist ein BMS?asdfasdf
 Ein entscheidender Aspekt bei der Konstruktion von Lithium-Ionen-Batterien für E-Bikes ist die Wahl des richtigen Battery-Management-Systems (BMS). Dieser Abschnitt erläutert die Funktionen, den Auswahlprozess und die Entscheidungsgrundlagen für die Verwendung eines Balancing-BMS anstelle eines BMS, welches lediglich Überwachungsfunktionen bietet.
-Ein BMS ist ein elektronisches System, das die Leistung und Sicherheit von Lithium-Ionen-Batterien überwacht und regelt.
+Ein BMS ist ein elektronisches System, welches die Leistung und Sicherheit von Lithium-Ionen-Batterien überwacht und regelt.
 In seiner Grundfunktion überwacht es Parameter wie Spannung,
 Strom, Temperatur und Ladezustand.
 Zudem bietet es Schutzmechanismen, um Überladung, Tiefentladung und Überhitzung zu verhindern.\\
@@ -145,10 +146,11 @@ Die Wahl eines Balancing-BMS für die E-Bike-Batteriekonstruktion basiert auf de
 Im Gegensatz zu einem BMS mit ausschließlich Überwachungsfunktionen interveniert ein Balancing-BMS aktiv, um den Ladungsausgleich zwischen den Zellen sicherzustellen.
 Die Variation der Spannung zwischen den Zellen ist problematisch, da sie zu negativen Effekten wie ungleichmäßiger Entladung, Überladung und Tiefenentladung führen kann.
 Eine ungleichmäßige Spannungsverteilung kann zu einer ungleichen Alterung der Zellen und vorzeitigem Versagen der Batterie führen.
-Durch das aktive Balancing wird vermieden, dass einzelne Zellen aufgrund unterschiedlicher Lade- und Entladezyklen eine Ungleichgewichtssituation erfahren, was die Batterielebensdauer verbessert und die Gesamtleistung des E-Bike-Akkus optimiert.\\
+Durch das aktive Balancing wird vermieden, dass einzelne Zellen aufgrund unterschiedlicher Lade- und Entladezyklen eine Ungleichgewichtssituation erfahren,
+dies verbessert was die Batterielebensdauer er verbessert und optimiert die Gesamtleistung des E-Bike-Akkus.\\
 
 Die Entscheidung für ein Balancing-BMS wurde getroffen, um eine maximale homogene Spannungsverteilung zu gewährleisten und sicherzustellen, dass die Batterie effizient, leistungsstark sowie langfristig zuverlässig und haltbar ist.
-Hier folgt der Schaltplan der Batterie der mit Hilfe der gewonnenen Erkenntnisse erstellt wurde \ref{fig:5}.
+Hier folgt der Schaltplan der Batterie der mithilfe der gewonnenen Erkenntnisse erstellt wurde \ref{fig:5}.
 
 \begin{figure}[h]
     \centering
@@ -156,13 +158,13 @@ Hier folgt der Schaltplan der Batterie der mit Hilfe der gewonnenen Erkenntnisse
     \caption{Schaltplan\cite{lorenz_scherrer_selbst_2023}}%
     \label{fig:5}
 \end{figure}
-Eine größere Version dieser Abbildung ist im Anhang zu finden.\ref{fig:5_1}
+Eine größere Version dieser Abbildung ist im Anhang zu finden.\ref{fig:5_1}\\
 %Wozu braucht man ein BMS?
-Da LLT Power die besten BMS für den Anwendungsfall herstellen wurde sich für dieses \href{https://www.lithiumbatterypcb.com/product/10s-11s-12s-13s-14s-15s-36v-48v-60v-bms-with-bluetooth-and-pc-communication-120a-constant-current/}{BMS} entschieden.
+Da LLT Power die besten BMS für den Anwendungsfall herstellen, fiel die Entscheidung auf dieses \href{https://www.lithiumbatterypcb.com/product/10s-11s-12s-13s-14s-15s-36v-48v-60v-bms-with-bluetooth-and-pc-communication-120a-constant-current/}{BMS}.
 
 Das BMS verfügt auch über einen Bluetooth Sensor, mit dem es möglich ist die BMS daten in einer App darzustellen\ref{fig:21}.
-Hier ist zu sehen die aktuelle Kapazität, Spannung und Temperatur der Batterie.
-Zudem wird auch die aktuelle Differenz unter den Zellen angezeigt und die Spannung jeder Zelle reihe.
+Hier ist die aktuelle Kapazität, Spannung und Temperatur der Batterie zu erkennen.
+Zudem wird auch die aktuelle Differenz unter den Zellen angezeigt und die Spannung jeder Zellenreihe.
 \begin{figure}[h]
     \centering
     \includegraphics[width=5cm]{images/BMS}
@@ -177,10 +179,11 @@ Zudem wird auch die aktuelle Differenz unter den Zellen angezeigt und die Spannu
 
 \section{Verbindung zwischen den Zellen}
 
-Die Verbindung zwischen den Zellen in einer Batterie kann auf verschiedene Weisen hergestellt werden, wobei die gängigsten Methoden das Punktzuschweißen, das Löten und das Verschrauben sind.
-Jede Methode hat ihre eigenen Vor- und Nachteile, und die Auswahl hängt von den spezifischen Anforderungen des Batteriedesigns ab.\\
+Die Verbindung zwischen den Zellen in einer Batterie kann auf verschiedene Weisen hergestellt werden, wobei die gängigsten Methoden das Punktschweißen, das Löten und das Verschrauben sind.
+Jede Methode bietet ihre eigenen Vor- und Nachteile.
+Die Auswahl hängt von den spezifischen Anforderungen des Batteriedesigns ab.\\
 
-Beim Punktzuschweißen werden dünnere Drähte oder Metallstreifen direkt an bestimmte Punkte auf den Batteriezellen geschweißt.
+Beim Punktschweißen werden dünnere Drähte oder Metallstreifen direkt an bestimmte Punkte auf den Batteriezellen geschweißt.
 Dies geschieht durch kurze elektrische Impulse, die einen Punkt auf der Zelle schmelzen und den Draht oder Streifen daran befestigen.\\
 
 Beim Löten wird ein Lötzinn verwendet, um die Verbindungen zwischen den Zellen und den Verbindungselementen herzustellen.
@@ -201,7 +204,7 @@ Darüber hinaus war die mobile Verwendung des E-Bikes ein entscheidender Faktor,
 \begin{figure}[h]
     \centering
     \includegraphics[width=8cm]{images/korb-fur-4-18650-akkus-reihenschaltung.png}
-    \caption{Fassung für 18650 Batterie\cite{.02.03.2024}}%
+    \caption{ Fassung für 18650 Batterie\cite{noauthor_korb_2024}}%
     \label{fig:2}
 \end{figure}
 
@@ -213,12 +216,12 @@ Obwohl beide Methoden ihre Vor- und Nachteile haben, wurde eine fundierte Entsch
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{images/Punktschweißen_beispiel.jpg}
-    \caption{ Punktgeschweißte Verbindung\cite{LorenzScherrer.02.03.2024}}%\cite{selbst Experiment}
+    \caption{ Punktgeschweißte Verbindung\cite{lorenz_scherrer_selbst_2023}}%\cite{selbst Experiment}
     \label{fig:3}
 \end{figure}
 
 %Löten als kosteneffiziente Option
-Löten ist die kosteneffizientere Option mit dem geringern Beschaffungsaufwand, da es weniger spezielle Ausrüstung erfordert und leichter zugänglich ist.
+Löten ist die kosteneffizientere Option mit dem geringen Beschaffungsaufwand, da es weniger spezielle Ausrüstung erfordert und leichter zugänglich ist.
 Die Einfachheit des Lötens ermöglichte eine effiziente Materialbeschaffung und eine schnellere Umsetzung.
 Obwohl Löten die Batterie durch die Wärmeentwicklung belasten kann und sie weniger Stabil ist.
 Diese Vermutung muss durch einen Test geprüft werden, da die andere Option nicht ohne weiteres zugänglich ist.\ref{fig:4}\\
@@ -226,19 +229,19 @@ Diese Vermutung muss durch einen Test geprüft werden, da die andere Option nich
 \begin{figure}[ht]
     \centering
     \includegraphics[width=8cm]{images/Löten.png}
-    \caption{ Verbindung Löten\cite{LorenzScherrer.02.03.2024}}
+    \caption{ Verbindung Löten\cite{lorenz_scherrer_selbst_2023}}
     \label{fig:4}
 \end{figure}
 
 %Fazit
-Das Punktgeschweißt werden der Batteriezellen wurde als bevorzugte Methode ausgewählt, da Löten aufgrund seiner Instabilität und des erhöhten Platzbedarfs mechanisch weniger praktikabel war.
+Das Punktschweißen der Batteriezellen wurde als bevorzugte Methode ausgewählt, da Löten aufgrund seiner Instabilität und des erhöhten Platzbedarfs mechanisch weniger praktikabel war.
 Die Auswahl der geeigneten Verbindungsmethode für Batteriezellen ist von entscheidender Bedeutung für Leistung, Sicherheit und Mobilität eines E-Bike-Batteriesystems.
-Angesichts der spezifischen Anforderungen und Einschränkungen erwies sich das Punktgeschweißt werden als die effizienteste Lösung, während die mechanische Verbindung mit Fassungen aus mehreren Gründen ausgeschlossen wurde.
+Angesichts der spezifischen Anforderungen und Einschränkungen erwies sich das Punktschweißen als die effizienteste Lösung, während die mechanische Verbindung mit Fassungen aus mehreren Gründen ausgeschlossen wurde.
 Die komplexe Natur und der hohe Platzbedarf der mechanischen Verbindung wären unpraktisch für die Anzahl der Zellen gewesen und hätten die Tragbarkeit des Systems beeinträchtigt.
 Nachdem die mechanische Verbindung ausgeschlossen war, blieben Löten und Punktschweißen als die beiden geeigneten Optionen für die Verbindung der Batteriezellen.
 Löten erwies sich als kosteneffizienter, erforderte jedoch einen Test, um die Stabilität zu bestätigen.
 Punktschweißen hingegen bot eine Standardlösung mit hoher Stabilität und geringerer Wärmeentwicklung auf den Batterien.
-Insgesamt wurde das Punktgeschweißt werden aufgrund seiner Effizienz und Zuverlässigkeit als bevorzugte Methode für die Verbindung der Batteriezellen für das E-Bike-Batteriesystem gewählt.\\
+Insgesamt wurde das Punktschweißen aufgrund seiner Effizienz und Zuverlässigkeit als bevorzugte Methode für die Verbindung der Batteriezellen für das E-Bike-Batteriesystem gewählt.\\
 
 
 
@@ -312,7 +315,7 @@ Wenn die Anzahl der Windungen in der Sekundärwicklung kleiner ist als die in de
 %Wo bekommt man einen transformator her?
 
 
-Ein Mikrowellen-Transformator eignet sich sehr gut für den bau eines Punktschweißgerät.
+Ein Mikrowellen-Transformator eignet sich sehr gut für den Bau eines Punktschweißgeräts.
 
 
 Um herauszufinden, wie der sekundäre Block gewickelt werden muss, kann die Transformator formel verwendet werden.\ref{eq:3}
@@ -337,13 +340,34 @@ Transformator Formel:
 
 
 
-%Wie kann man den Sekundären Block sicher entfernen?
-Jetzt muss der sekundäre Block entfernt werden, um hin neu zu wickeln. \ref{eq:3}
 
+\subsubsection*{Demontage des Transformators}
+Die Sekundärwicklung wurde mithilfe einer Maschine durchgesägt, um die Sekundärwicklung so zu wickeln, wie oben berechnet, siehe Formel\ref{eq:3}.
+Beim Durchsägen wurde die primäre Wicklung beschädigt, siehe Bild\ref{fig:35}, weshalb ein neuer Transformator beschafft werden musste.
 Der Block muss auf einer Seite mit einer Stahlsäge durchtrennt werden und dann herausgeschlagen werden.
+Bei dem zweiten Transformator wurde die sekundäre Wicklung ebenfalls beschädigt, was eine Lötarbeit erforderte.
+Dabei musste sorgfältig darauf geachtet werden, die Isolierung der Wicklungen zu entfernen und die Drahtenden wieder zu verbinden.
 
 
-Hier ist das Ergebnis zu sehen\ref{fig:22}:
+
+\subsubsection*{Aufbau des Punktschweißgeräts}
+Ein Holzblock diente als Basis und Halterung für den Transformator.
+Der Block wurde so modifiziert, dass er den Transformator sicher hielt und gleichzeitig eine einfache Handhabung ermöglichte.
+Es wurde ein 5mm dicker Kupferdraht angespitzt die den Kontakt mit dem Nickelband herstellen wird, siehe Bild\ref{fig:23}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=8cm]{images/Funke}
+    \caption{Punktschweißen von zwei Nickelstreifen\cite{lorenz_scherrer_selbst_2023}}
+    \label{fig:23}
+\end{figure}
+
+\subsubsection*{Elektrische Verbindungen und Steuerung}
+Um den Schweißvorgang zu steuern, wurden verschiedene Methoden in Betracht gezogen.
+Standardlösungen wie ein spezieller Controller wurden aufgrund der Kosten und Komplexität verworfen.
+Stattdessen wurde ein einfacher Push-Button-Schalter(Lichttaster) verwendet, um den Stromkreis kurzzeitig zu schließen und den Schweißvorgang auszulösen.
+Hier oben rechts im Bild zu sehen\ref{fig:22}.
+
 
 \begin{figure}[ht]
     \centering
@@ -352,14 +376,8 @@ Hier ist das Ergebnis zu sehen\ref{fig:22}:
     \label{fig:22}
 \end{figure}
 
-Hier ist noch zu sehen wie das Punktschweißgerät in Aktion funktioniert\ref{fig:23}:
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=8cm]{images/Funke}
-    \caption{Punktschweißen von zwei Nickelstreifen\cite{lorenz_scherrer_selbst_2023}}
-    \label{fig:23}
-\end{figure}
+
 
 %Bilder vom entfernen des Blocks
 
@@ -385,8 +403,8 @@ Es wurde beschlossen, die Zellen mit doppelseitigem Klebeband anstatt mit Heißk
 
 Anschließend wurden alle Zellen punktverschweißt, sowohl in Reihe als auch parallel geschaltet.
 Die Anschlüsse des Batteriemanagementsystems (BMS) wurden gemäß dem Blockschaltbild \ref{fig:5_1} an die jeweilige Zellreihe angeschlossen.
-Nach Abschluss dieser Schritte wurde das Batteriepack mit einer Umwicklung aus Katonasch und Kaptontape isoliert.
+Nach Abschluss dieser Schritte wurde der Batteriepack mit einer Umwicklung aus Katonasch und Kaptontape isoliert.
 Diese Maßnahme diente dazu, die Zellen vor äußeren Einflüssen zu schützen und potenzielle Kurzschlüsse zu vermeiden.
-Nach der Isolierung konnte das Batteriepack erfolgreich mit einem Ladegerät geladen werden.
+Nach der Isolierung konnte der Batteriepack erfolgreich mit einem Ladegerät geladen werden.
 
 
