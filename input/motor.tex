@@ -1,7 +1,4 @@
 \chapter{Motor}
-
-
-Kapitel 5 widmet sich dem Motor, einem zentralen Bauteil im E-Bike-System.
 Bei der Auswahl und Integration eines Motors sind mehrere wichtige Fragen zu berücksichtigen, um eine optimale Leistung und Kompatibilität sicherzustellen.
 Im Folgenden werden diese Fragen detailliert behandelt, wobei besonderes Augenmerk auf die Auswahl des Motors, seine Abmessungen, die Passform am Fahrrad, die Leistung in Watt und die ideale Positionierung des Motors gelegt wird.
 \section{Arten von Fahrradmotoren}
@@ -150,13 +147,38 @@ Durch diese Unterschiede in der Anordnung wird eine gleichmäßige und stabile L
 
 Radnabenmotoren bieten einen weiteren Vorteil: die Stromrückgewinnung.
 Durch ihre Konstruktion ermöglichen sie es, kinetische Energie während des Bremsens in elektrische Energie umzuwandeln.
-Dies geschieht, indem der Motor als Generator fungiert.
+Dies geschieht, indem der Motor als Generator fungiert.\\
 
 Der BLDC-Motor, der in Radnabenmotoren verwendet wird, kann seine Rolle ändern und als Generator arbeiten, wenn er dem Drehmoment entgegenwirkt.
 Bei dieser Umkehrung des Betriebsmodus des Motors wird die mechanische Energie des rotierenden Rades in elektrische Energie umgewandelt, die dann in einer Batterie gespeichert oder direkt verwendet werden kann.
 Diese Stromrückgewinnungsfunktion ist besonders nützlich in Anwendungen, in denen häufiges Bremsen oder Abbremsen erforderlich ist, wie zum Beispiel bei Elektrofahrrädern.
 Sie trägt nicht nur zur Verbesserung der Energieeffizienz bei, sondern kann auch die Reichweite des Fahrzeugs erhöhen und die Lebensdauer der Bremsen verlängern, da weniger mechanische Bremsen verwendet werden müssen.
-Zudem vergessert sie den Bremsweg des E-Bikes.
+Zudem verbessert sie den Bremsweg des E-Bikes.
+Hier ist zu sehen wie viel Strom bei sehr starken Abbremsen in die Batterie zurückfließt~\ref{fig:38}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=5cm]{images/ernergierück}
+    \caption{Energierückgewinnung bei starken Abbremsen\cite{lorenz_scherrer_selbst_2023}}
+    \label{fig:38}
+\end{figure}
+
+\subsection{Gleichstrombremsen Funktion}
+Wenn der Stator an eine Gleichspannungsquelle angeschlossen wird, fließt ein Gleichstrom durch die Wicklung.
+Dieser Gleichstrom erzeugt ein magnetisches Gleichfeld.
+Dieses Gleichfeld induziert in dem darin rotierenden Läufer eine Spannung.
+Durch den Kurzschluss der Läuferwicklung fließt in dieser ein Strom.
+Aufgrund des geringen Widerstandes des Läufers genügen bereits kleine induzierte Spannungen, um im Läufer einen hohen Strom zu erzeugen.
+Dieser Strom erzeugt im Rotor ein Magnetfeld.
+Dieses Magnetfeld übt auf die stromdurchflossenen Leiter des Rotors eine Kraft aus, die nach der Lenz'schen Regel so gerichtet ist, dass der Rotor abgebremst wird[4], wodurch die Drehzahl des Motors sinkt.
+Gleichzeitig mit der Drehzahlabnahme sinkt die Frequenz der im Rotor induzierten Spannung und damit auch der induktive Blindwiderstand des Rotors.
+Dadurch überwiegt nun der ohmsche Widerstand des Rotors.
+Durch den nun überwiegenden ohmschen Widerstand nimmt die Bremswirkung mit abnehmender Drehzahl zu.
+Das Bremsmoment bei der Gleichstrom-Auslaufbremsung fällt erst kurz vor dem Stillstand stark ab und geht bei Stillstand des Läufers gegen Null.
+Nach dem Stillstand kann im Gegensatz zur Gegenstrombremsung kein Anlaufen des Motors in Gegenrichtung erfolgen.
+%Rekubarionsbremse
+%Wirbelstrombremse
+%Generator
+%Dynanamo
 
 %\href{https://www.portescap.com/de-DE/wissen/dokumente-und-zeichnungen/white-papers/nutzung-eines-gleichstromb%C3%BCrstenmotors-als-generator}
 
@@ -223,9 +245,9 @@ Durch die Verwendung eines Motors mit dieser Leistung kann eine ausreichende Unt
 Ein Reichweitentest wurde mit dem E-Bike durchgeführt, um die maximale Reichweite zu bestimmen.
 Dafür wurde eine Strecke von etwa 22 Kilometern festgelegt.
 Die spezifischen Geschwindigkeiten und Streckenparameter, unter denen der Test durchgeführt wurde, sind in diesen Bildern zu sehen. 
-Einmal die allgemeinen Streckenparameter\ref{fig:33} und das Geschwindigkeitshistogramm\ref{fig:34}.
+Einmal die allgemeinen Streckenparameter siehe Abbildung~\ref{fig:33} und das Geschwindigkeitshistogramm~\ref{fig:34}.
 Vor und nach der Testfahrt wurde der Ladezustand der Batterie abgelesen.
-Beim Start lag die Batterie bei 97\% und nach der Tour bei 54\%\ref{fig:31}\ref{fig:32}.
+Beim Start lag die Batterie bei 97\% und nach der Tour bei 54\% Siehe Abbildung: \ref{fig:31} und \ref{fig:32}.
 Das Ergebnis zeigte, dass 43\% der Batteriekapazität verbraucht wurden.\\
 
 Bei einer Hochrechnung, die auf den Testergebnissen basiert, ergibt sich eine potenzielle Reichweite von ungefähr 40 Kilometern bei maximaler Geschwindigkeit ohne eigene Tretunterstützung.

@@ -8,7 +8,7 @@ Hierbei werde ich größere Lithium-Ionen-Zellen verwenden und diese in einer ge
 Zudem wird ein Smart Battery Management System (BMS) eingesetzt, um die Sicherheit und Effizienz der Batterie zu gewährleisten.\\
 
 Des Weiteren liegt im Fokus die Programmierung des Controllers.
-Ich will die Motordaten und die Leistung flexibel anpassen, um das E-Bike sowohl Straßen tauglich zu machen (maximale Leistung 250W), als auch zu testen, welche Leistung ein 1500W Motor erreicht (bringt) (auf einem Privatgrundstück).\\
+Ich will die Motordaten und die Leistung flexibel anpassen, um das E-Bike sowohl straßentauglich zu machen (maximale Leistung 250W), als auch zu testen, welche Leistung ein 1500W Motor erreicht (bringt) (auf einem Privatgrundstück).\\
 
 
 Eine essenzielle Komponente bei der Realisierung eines individuell konstruierten E-Bikes ist die Batterie, welche den Motor mit der benötigten Energie versorgt.
@@ -406,5 +406,31 @@ Die Anschlüsse des Batteriemanagementsystems (BMS) wurden gemäß dem Blockscha
 Nach Abschluss dieser Schritte wurde der Batteriepack mit einer Umwicklung aus Katonasch und Kaptontape isoliert.
 Diese Maßnahme diente dazu, die Zellen vor äußeren Einflüssen zu schützen und potenzielle Kurzschlüsse zu vermeiden.
 Nach der Isolierung konnte der Batteriepack erfolgreich mit einem Ladegerät geladen werden.
+
+\section{Ladedauer der Batterie}
+
+%Welches Ladegerät ?
+Zum Laden der Batterie wurde ein Ladegerät mit 54,6 Volt und 2 Ampere Stromstärke verwendet.
+Siehe~\cite{noauthor_uurrpp_nodate}.
+Es hätte auch ein Ladegerät mit 5 Ampere zur Verfügung gestanden, aber aus Budgetgründen und weil die Ladegeschwindigkeit nicht als signifikant angesehen wurde, wurde das schwächere Gerät gewählt.
+Jedoch hat das Gerät eine höhere Stromstärke als vom Hersteller angegeben mit 2.4 Amper siehe~\ref{fig:36}.
+\begin{table}[h]
+\begin{tabular}{l|lll}
+Uhrzeit & Ladestand & Ladezeit & Prozent geladen \\ \hline
+13:09 ~\ref{fig:36}   & 37\%      & 0        & +0\%            \\
+15:07   & 61\%      & 1:58     & +24\%           \\
+17:45   & 92\%      & 4:36     & +55\%           \\
+18:29 ~\ref{fig:37}   & 100\%     & 5:20     & +63\%
+\end{tabular}
+\caption{}
+\label{tab:my-table}
+\end{table}
+
+Hier ist die Ladegeschwindigkeit zu sehen~\ref{tab:my-table}, die sehr langsam ist, da ein E-Bike oft über Nacht oder am Arbeitsplatz geladen wird, aber akzeptabel ist.
+%Wie funktioniert der Ladevorgang einer Batterie?
+
+%Es würde schneller gehen wenn man ein besseres Ladegerät verwenden würde?
+
+%Test wie lange braucht die Batterie um voll geladen zu werden?
 
 
